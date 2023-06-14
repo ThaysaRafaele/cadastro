@@ -1,4 +1,6 @@
 import './App.css';
+import InputMask from 'react-input-mask';
+
 
 function App() {
   return (
@@ -12,7 +14,7 @@ function App() {
             <input type="text" id="nome" name="nome" required /><br />
 
             <label htmlFor="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" required /><br />
+            <InputMask mask="999.999.999-99" maskChar="" id="cpf" name="cpf" required />
 
             <label htmlFor="endereco">Endereço:</label>
             <input type="text" id="endereco" name="endereco" required /><br />
@@ -24,8 +26,13 @@ function App() {
             <input type="text" id="cidade" name="cidade" required /><br />
 
             <label htmlFor="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" required />
-
+            <InputMask
+              mask="99999-999"
+              id="cep"
+              name="cep"
+              pattern="[0-9]{5}-[0-9]{3}"
+              required
+            />
 
             <label htmlFor="uf">UF:</label>
             <select id="uf" name="uf" required>
@@ -88,10 +95,12 @@ function App() {
             <input type="url" id="website" name="website" /><br />      
             
             <label htmlFor="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" /><br />
+            <InputMask mask="+55 99 99999-9999" maskChar="" id="telefone" name="telefone" required /><br />
+
 
             <label htmlFor="celular">Celular:</label>
-            <input type="text" id="celular" name="celular" required />      
+            <InputMask mask="+55 99 99999-9999" maskChar="" id="celular" name="celular" required />
+   
           </fieldset>
 
           <fieldset className="fieldset-group">
