@@ -1,38 +1,105 @@
-.App {
+.container {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+select {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"],
+button {
+  padding: 10px;
+  background-color: #61dafb;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"]:hover,
+button:hover {
+  background-color: #45b6d9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.fieldset-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldset-group .login {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fieldset-group .login label {
+  margin-right: 10px;
+}
+
+.fieldset-group .labelCadastro {
+  margin-bottom: 5px;
+}
+
+
+.legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  margin-right: 20px;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.login {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.login label {
+  margin-right: 10px;
+}
+
+.checkOptions{
+  display: inline-table;
+  margin-top: 1rem;
 }
